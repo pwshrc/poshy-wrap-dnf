@@ -4,7 +4,7 @@ Set-StrictMode -Version Latest
 
 
 
-if (-not (Test-Command dnf)) {
+if (-not (Test-Command dnf) -and (-not $Global:PWSHRC_FORCE_MODULES_EXPORT_UNSUPPORTED)) {
     return
 }
 
